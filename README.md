@@ -15,7 +15,7 @@ The movie industry is a multi-billion dollar industry that has had consistent an
 4. Use Lasso / L1 regularization to improve model; grid search for hyper-parameters of Lasso model.  
 5. Use test data to make predictions, plot predictions vs. actual, and plot residuals.  
   
-### Data  
+**Data**  
   
 The data I used to build my linear regression model was mainly scraped from Box Office Mojo (boxofficemojo.com) using BeautifulSoup. For about 20 genres, I scraped the title and links from each genre page. For each title and link pair, I then scraped the following features: title, director, budget, runtime, genre(s), rating, release date, and domestic total gross. After that, I scraped a page from Wikipedia to get a list of directors that had won a Golden Globe for directing. I used this list to engineer a feature called winning director, which identified if a director for a particular movie had previously won a Golden Globe for directing. I also created the feature season from the month of the release date, and split that into the dummy variables winter, spring, summer, and fall. Additionally, I logged the domestic total gross (my target variable), and budget, as both were high in magnitude, in the millions. The final features that I chose to use in my model are: logged domestic total gross, logged budget, runtime, rating (G, PG, PG-13, R, and NC-17), release season (winter, spring, summer, and fall), release year, and winning director.
   
